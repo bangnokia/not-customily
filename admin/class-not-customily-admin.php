@@ -100,4 +100,25 @@ class Not_Customily_Admin {
 
 	}
 
+    public function add_warehouse_product_id_field()
+    {
+        global $product_object;
+
+        woocommerce_wp_text_input(array(
+            'id' => 'warehouse_product_id',
+            'label' => __('Warehouse Product ID', 'woocommerce'),
+            'placeholder' => '',
+            'description' => __('Enter the Warehouse Product ID here.', 'woocommerce'),
+            'value' => $product_object->get_meta('warehouse_product_id')
+        ));
+    }
+
+    public function save_warehouse_product_id_field($post_id)
+    {
+        if (isset($_POST['warehouse_product_id'])) {
+            $product = wc_get_product($post_id);
+            $product->update_meta_data('warehouse_product_id', sanitize_text_field($_POST['warehouse_product_id']));
+            $product->save();
+        }
+    }
 }

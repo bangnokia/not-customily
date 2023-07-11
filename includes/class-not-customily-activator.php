@@ -30,7 +30,7 @@ class Not_Customily_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+        // add a custom field to product named `warehouse_product_id`
 	}
 
 }
