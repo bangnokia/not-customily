@@ -71,7 +71,6 @@ class Not_Customily_Public
     public function add_personalized_section()
     {
         if (is_product()) {
-//            $this->injectPopupButton();
             $this->injectPersonalize();
         }
     }
@@ -80,10 +79,10 @@ class Not_Customily_Public
     {
         global  $product;
 
-        $warehouse_product_id = $_GET['warehouse_product_id'] ?: get_post_meta($product->get_id(), 'warehouse_product_id', true);
+        $warehouse_product_id = $_GET['warehouse_product_id'] ?? get_post_meta($product->get_id(), 'warehouse_product_id', true);
 
         echo <<<HTML
-                <div id="tda-customily" class="tda-peronalized-section" style="height: 500px;">hahahah</div>
+                <div id="tda-customily" class="tda-peronalized-section">hahahah</div>
                 <script>
                     window.customily = {
                         target: 'tda-customily',
