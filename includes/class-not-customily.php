@@ -180,7 +180,7 @@ class Not_Customily
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
-        $this->loader->add_action('woocommerce_before_add_to_cart_button', $plugin_public, 'add_personalized_section');
+        $this->loader->add_action('woocommerce_after_add_to_cart_button', $plugin_public, 'add_personalized_section');
     }
 
     /**

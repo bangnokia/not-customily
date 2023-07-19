@@ -57,14 +57,13 @@ class Not_Customily_Public
     public function enqueue_styles()
     {
 //        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/not-customily-public.css', array(), $this->version, 'all');
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/style.css', array(), $this->version, 'all');
+//        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/style.css', array(), $this->version, 'all');
         wp_enqueue_style($this->plugin_name, 'https://customily-injector.pages.dev/style.css', array(), $this->version, 'all');
     }
 
     public function enqueue_scripts()
     {
 //        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/not-customily-public.js', array('jquery'), $this->version, false);
-//        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/not-customily.umd.cjs', [], $this->version, true);
         wp_enqueue_script($this->plugin_name, 'https://customily-injector.pages.dev/not-customily.iife.js', [], $this->version, true);
     }
 
@@ -82,27 +81,21 @@ class Not_Customily_Public
         $warehouse_product_id = $_GET['warehouse_product_id'] ?? get_post_meta($product->get_id(), 'warehouse_product_id', true);
 
         echo <<<HTML
-                <div id="tda-customily" class="tda-peronalized-section">hahahah</div>
-                <script>
+                <div id="tda-not-customily" class="tda-peronalized-section">is it working?</div>
+                <script type="text/javascript">
+                console.log('wtf is that')
+                if (window.customily !== undefined) {
+                   console.log('customily is setup') 
+                } else {
+                    console.log('init customily')
                     window.customily = {
-                        target: 'tda-customily',
-                        productId: {$warehouse_product_id},
+                        target: '#tda-not-customily',
+                        productId: $warehouse_product_id,
                         previewWrapper: document.querySelector('.product-gallery'),
                         formWrapper: document.querySelector('.variations_form'),
                     }
+                }
                 </script>
 HTML;
     }
-
-    protected function injectPopupButton()
-    {
-        global $product;
-
-        echo <<<HTML
-<button type="button" class="x-personalize-btn">Personalize</button>
-HTML;
-
-    }
-
-
 }
