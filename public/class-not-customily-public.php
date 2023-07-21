@@ -83,16 +83,12 @@ class Not_Customily_Public
         echo <<<HTML
                 <div id="tda-not-customily" class="tda-peronalized-section">is it working?</div>
                 <script type="text/javascript">
-                console.log('wtf is that')
-                if (window.customily !== undefined) {
-                   console.log('customily is setup') 
-                } else {
-                    console.log('init customily')
+                if (window.customily === undefined) {
                     window.customily = {
                         target: '#tda-not-customily',
                         productId: $warehouse_product_id,
                         previewWrapper: document.querySelector('.product-gallery'),
-                        formWrapper: document.querySelector('.variations_form'),
+                        formWrapper: document.querySelector('.product-info form.cart'),
                     }
                 }
                 </script>
