@@ -89,6 +89,7 @@ class Not_Customily_Public
                         productId: $warehouse_product_id,
                         previewWrapper: document.querySelector('.product-gallery'),
                         formWrapper: document.querySelector('.product-info form.cart'),
+                        wooProductId: {$product->get_id()},
                     }
                 }
                 </script>
