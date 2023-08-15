@@ -18,7 +18,7 @@
  * Description:       This is not Customily
  * Version:           1.0.1
  * Author:            Nguyen Viet
- * Author URI:        https://https://daudau.cc
+ * Author URI:        https://daudau.cc
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       not-customily
