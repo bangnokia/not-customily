@@ -58,13 +58,13 @@ class Not_Customily_Public
     {
 //        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/not-customily-public.css', array(), $this->version, 'all');
 //        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/style.css', array(), $this->version, 'all');
-        wp_enqueue_style($this->plugin_name, 'https://customily-injector.pages.dev/style.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, 'https://customedge-injector.pages.dev/style.css', array(), $this->version, 'all');
     }
 
     public function enqueue_scripts()
     {
 //        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/not-customily-public.js', array('jquery'), $this->version, false);
-        wp_enqueue_script($this->plugin_name, 'https://customily-injector.pages.dev/not-customily.iife.js', [], $this->version, true);
+        wp_enqueue_script($this->plugin_name, 'https://customedge-injector.pages.dev/wp-customedge.iife.js', [], $this->version, true);
     }
 
     public function add_personalized_section()

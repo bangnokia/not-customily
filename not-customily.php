@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://https://daudau.cc
+ * @link              https://customedge.co
  * @since             0.1.1
- * @package           Not_Customily
+ * @package           WP_CustomEDGE
  *
  * @wordpress-plugin
- * Plugin Name:       not customily
- * Plugin URI:        https://github.com/bangnokia
- * Description:       This is not Customily
- * Version:           1.0.1
+ * Plugin Name:       WP CustomEDGE
+ * Plugin URI:        https://github.com/swebvn/wp-customedge
+ * Description:       This is CustomEDGE wordpress plugin
+ * Version:           1.0.3
  * Author:            Nguyen Viet
  * Author URI:        https://daudau.cc
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       not-customily
+ * Text Domain:       wp-customedge
  * Domain Path:       /languages
  */
 
