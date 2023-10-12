@@ -81,7 +81,7 @@ class Not_Customily_Public
         $warehouse_product_id = $_GET['warehouse_product_id'] ?? get_post_meta($product->get_id(), 'warehouse_product_id', true);
 
         echo <<<HTML
-                <div id="tda-not-customily" class="tda-peronalized-section">is it working?</div>
+                <div id="tda-not-customily" class="tda-peronalized-section">Loading personalization...</div>
                 <script type="text/javascript">
                 if (window.customily === undefined) {
                     window.customily = {
