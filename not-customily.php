@@ -16,7 +16,7 @@
  * Plugin Name:       WP CustomEDGE
  * Plugin URI:        https://github.com/swebvn/wp-customedge
  * Description:       This is CustomEDGE wordpress plugin
- * Version:           1.0.3
+ * Version:           1.0.6
  * Author:            Nguyen Viet
  * Author URI:        https://daudau.cc
  * License:           GPL-2.0+
